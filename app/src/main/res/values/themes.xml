@@ -1,0 +1,9 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MintSongsPodcast" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <item name="colorPrimary">@color/black_primary</item>
+    </style>
+
+    <style name="Theme.MintSongsPodcast" parent="Base.Theme.MintSongsPodcast" />
+</resources>
