@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_primary"
+    tools:context=".SearchActivity">
+
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:id="@+id/back2btn"
+        app:tint="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/back"/>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:id="@+id/serachtxt"
+        android:fontFamily="@font/bariol_bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/back2btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:textColor="@color/white"
+        android:layout_toRightOf="@id/back2btn"
+        android:text="Search"
+        android:textSize="25dp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/carddit"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/searchButton"
+        app:layout_constraintTop_toBottomOf="@+id/serachtxt"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="7dp"
+        android:backgroundTint="@color/white"
+        >
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Song, Movie, Artist"
+            android:textColorHint="@color/darkgrey"
+            android:background="@color/transparent"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLines="1" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/searchButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toBottomOf="@id/serachtxt"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/search"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/carddit"
+        android:layout_marginTop="25dp"
+        android:text="Search" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchRecyclerView"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@+id/carddit"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_below="@id/searchButton"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
